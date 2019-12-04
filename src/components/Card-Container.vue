@@ -4,6 +4,13 @@
     <Card />
     <Card />
     <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
   </div>
 </template>
 
@@ -20,13 +27,14 @@ export default {
 
 <style>
 #CardContainer {
+  padding: 1rem 3rem;
   color: #2c3e50;
-  height: 87vh;
-  width: 100%;
+  height: 84vh;
+  width: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 </style>

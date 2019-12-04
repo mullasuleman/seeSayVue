@@ -13,7 +13,7 @@ export default {
 <style>
 #Footer {
   color: #2c3e50;
-  height: 5vh;
+  height: 8vh;
   width: 100vw;
   background-color: #333;
 }

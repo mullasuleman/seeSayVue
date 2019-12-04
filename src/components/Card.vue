@@ -13,8 +13,10 @@ export default {
 <style>
 #Card {
   color: #2c3e50;
-  height: 200px;
-  width: 300px;
+  height: 270px;
+  width: 200px;
+  border-radius: 1rem;
   background-color: #333;
+  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.6);
 }
 </style>
