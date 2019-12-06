@@ -29,7 +29,8 @@ export default {
 #CardContainer {
   padding: 1rem 3rem;
   color: #2c3e50;
-  height: 84vh;
+  min-height: 100%;
+  height: 82vh;
   width: 80%;
   display: flex;
   flex-direction: row;

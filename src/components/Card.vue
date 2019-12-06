@@ -18,5 +18,12 @@ export default {
   border-radius: 1rem;
   background-color: #333;
   box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease-in;
+}
+
+#Card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  border: 3px solid white;
 }
 </style>

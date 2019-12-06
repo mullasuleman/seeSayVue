@@ -1,25 +1,31 @@
 <template>
   <div class="Header">
     <h1>SEE&SAY</h1>
+    <HistoryBar />
   </div>
 </template>
 
 <script>
+import HistoryBar from "./HistoryBar";
+
 export default {
   name: "Header",
+  components: {
+    HistoryBar
+  },
   props: {}
 };
 </script>
 
 <style scoped>
 .Header {
-  padding: 1rem;
+  padding: 0.2rem 4rem;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 8vh;
-  background-color: #444;
+  height: 10vh;
+  background-color: rgb(250, 198, 28);
 }
 </style>

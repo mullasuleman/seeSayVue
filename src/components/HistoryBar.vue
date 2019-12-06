@@ -1,16 +1,35 @@
 <template>
   <div id="HistoryBar">
-    <h3>History</h3>
+    <HistoryItem />
   </div>
 </template>
 
 <script>
+import HistoryItem from "./History-Item.vue";
+
 export default {
-  name: "HistoryBar"
+  name: "HistoryBar",
+  components: {
+    HistoryItem
+  }
 };
 </script>
 
 <style>
 #HistoryBar {
+  padding: 0.25rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(36, 39, 43);
+  border-radius: 1rem;
+  transition: 0.2s ease-in;
+}
+
+#HistoryItem:hover {
+  transform: scale(1.1);
 }
 </style>

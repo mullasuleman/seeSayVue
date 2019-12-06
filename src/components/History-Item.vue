@@ -12,5 +12,9 @@ export default {
 
 <style>
 #HistoryItem {
+  height: 100%;
+  width: 80px;
+  background-color: red;
+  border-radius: 1rem;
 }
 </style>
