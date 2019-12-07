@@ -1,16 +1,6 @@
 <template>
   <div id="CardContainer">
-    <!-- Cards are just here temporarily for testing -->
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+    <Card v-for="(item, index) in cardData" :key="index" :imgSrc="item.source" :name="item.name" />
   </div>
 </template>
 
@@ -21,6 +11,9 @@ export default {
   name: "CardContainer",
   components: {
     Card
+  },
+  props: {
+    cardData: Array
   }
 };
 </script>
@@ -31,7 +24,7 @@ export default {
   color: #2c3e50;
   min-height: 100%;
   height: 82vh;
-  width: 80%;
+  width: 75%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

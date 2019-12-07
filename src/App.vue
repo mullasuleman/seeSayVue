@@ -1,7 +1,7 @@
 <template>
   <div id="App">
     <Header />
-    <CardContainer />
+    <CardContainer :cardData="planets" />
     <Footer />
   </div>
 </template>
@@ -17,6 +17,64 @@ export default {
     Header,
     CardContainer,
     Footer
+  },
+  data() {
+    return {
+      planets: [
+        // Need to add rest of planets
+        // Make sure images of planets have black BGs for consistency
+        {
+          name: "Earth",
+          source: "Earth.png",
+          audio: { name: "", sentence: "" }
+        },
+        {
+          name: "Mars",
+          source: "Mars.jpg",
+          audio: { name: "", sentence: "" }
+        },
+        {
+          name: "Saturn",
+          source: "Saturn.jpg",
+          audio: { name: "", sentence: "" }
+        },
+        {
+          name: "Pluto",
+          source: "Pluto.png",
+          audio: { name: "", sentence: "" }
+        },
+        {
+          name: "Mercury",
+          source: "Mercury.jpg",
+          audio: { name: "", sentence: "" }
+        },
+        {
+          name: "Neptune",
+          source: "Neptune.jpg",
+          audio: { name: "", sentence: "" }
+        },
+        {
+          name: "Pluto",
+          source: "Pluto.png",
+          audio: { name: "", sentence: "" }
+        },
+        {
+          name: "Uranus",
+          source: "Uranus.jpg",
+          audio: { name: "", sentence: "" }
+        },
+        {
+          name: "Venus",
+          source: "Venus.jpg",
+          audio: { name: "", sentence: "" }
+        },
+        {
+          name: "The Sun",
+          source: "Sun.jpg",
+          audio: { name: "", sentence: "" }
+        }
+      ]
+    };
   }
 };
 </script>

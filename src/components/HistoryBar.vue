@@ -26,10 +26,5 @@ export default {
   align-items: center;
   background-color: rgb(36, 39, 43);
   border-radius: 1rem;
-  transition: 0.2s ease-in;
-}
-
-#HistoryItem:hover {
-  transform: scale(1.1);
 }
 </style>
