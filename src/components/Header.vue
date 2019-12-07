@@ -1,7 +1,7 @@
 <template>
   <div class="Header">
     <h1>SEE&SAY</h1>
-    <HistoryBar />
+    <HistoryBar :history="history" />
   </div>
 </template>
 
@@ -13,7 +13,9 @@ export default {
   components: {
     HistoryBar
   },
-  props: {}
+  props: {
+    history: Array
+  }
 };
 </script>
 

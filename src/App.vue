@@ -1,6 +1,6 @@
 <template>
   <div id="App">
-    <Header />
+    <Header :history="history" />
     <CardContainer :cardData="planets" />
     <Footer />
   </div>
@@ -21,8 +21,6 @@ export default {
   data() {
     return {
       planets: [
-        // Need to add rest of planets
-        // Make sure images of planets have black BGs for consistency
         {
           name: "Earth",
           source: "Earth.png",
@@ -73,7 +71,8 @@ export default {
           source: "Sun.jpg",
           audio: { name: "", sentence: "" }
         }
-      ]
+      ],
+      history: ["Earth.png", "Mars.jpg"]
     };
   }
 };

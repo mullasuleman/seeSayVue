@@ -1,6 +1,6 @@
 <template>
   <div id="HistoryBar">
-    <HistoryItem />
+    <HistoryItem v-for="(item, index) in history" :key="index" :imgSrc="item" />
   </div>
 </template>
 
@@ -11,6 +11,9 @@ export default {
   name: "HistoryBar",
   components: {
     HistoryItem
+  },
+  props: {
+    history: Array
   }
 };
 </script>
