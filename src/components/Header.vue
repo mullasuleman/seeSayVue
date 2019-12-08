@@ -1,17 +1,17 @@
 <template>
   <div class="Header">
     <h1>SEE&SAY</h1>
-    <HistoryBar :history="history" />
+    <!-- <HistoryBar :history="history" /> -->
   </div>
 </template>
 
 <script>
-import HistoryBar from "./HistoryBar";
+// import HistoryBar from "./HistoryBar";
 
 export default {
   name: "Header",
   components: {
-    HistoryBar
+    // HistoryBar
   },
   props: {
     history: Array
@@ -21,10 +21,10 @@ export default {
 
 <style scoped>
 .Header {
-  padding: 0.2rem 4rem;
+  padding: 0.2rem 8rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
   height: 10vh;

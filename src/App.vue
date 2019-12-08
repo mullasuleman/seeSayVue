@@ -1,7 +1,8 @@
 <template>
   <div id="App">
     <Header :history="history" />
-    <CardContainer :cardData="planets" />
+    <CardContainer :cardData="planets" :history="history" />
+    <HistoryBar :history="history" />
     <Footer />
   </div>
 </template>
@@ -9,13 +10,16 @@
 <script>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer";
+import HistoryBar from "./components/HistoryBar";
 import CardContainer from "./components/Card-Container.vue";
+
 
 export default {
   name: "app",
   components: {
     Header,
     CardContainer,
+    HistoryBar,
     Footer
   },
   data() {
@@ -37,8 +41,8 @@ export default {
           audio: { name: "", sentence: "" }
         },
         {
-          name: "Pluto",
-          source: "Pluto.png",
+          name: "Jupiter",
+          source: "Jupiter.jpg",
           audio: { name: "", sentence: "" }
         },
         {

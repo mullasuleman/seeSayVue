@@ -20,14 +20,16 @@ export default {
 
 <style>
 #HistoryBar {
-  padding: 0.25rem;
-  width: 50%;
-  height: 100%;
+  margin-bottom: 30px;
+  padding: 0.5rem;
+  width: 83vw;
+  height: 100px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   align-items: center;
   background-color: rgb(36, 39, 43);
   border-radius: 1rem;
+  /* border: 2px solid snow; */
 }
 </style>

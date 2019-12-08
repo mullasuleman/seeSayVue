@@ -16,12 +16,12 @@ export default {
 <style>
 #HistoryItem {
   height: 100%;
-  width: 80px;
+  width: 9%;
   background-color: rgba(212, 212, 212, 0.295);
   border-radius: 1rem;
   transition: 0.2s ease-in;
   overflow: hidden;
-  margin: 0 0.1rem;
+  margin: 0 0.5%;
 }
 
 #HistoryItem:hover {
@@ -32,6 +32,7 @@ export default {
 
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 </style>

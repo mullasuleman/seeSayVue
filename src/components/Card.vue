@@ -1,6 +1,6 @@
 <template>
   <div id="Card">
-    <img :src="require(`../assets/images/${imgSrc}`)" alt="planets" />
+    <img :src="require(`../assets/images/${imgSrc}`)" :alt="name" @click="addHistory" />
     <h2>{{name}}</h2>
   </div>
 </template>
@@ -10,22 +10,29 @@ export default {
   name: "Card",
   props: {
     imgSrc: String,
-    name: String
+    name: String,
+    history: Array
+  },
+  methods: {
+    addHistory() {
+      if (this.history.length >= 10) {
+        this.history.shift();
+      }
+      this.history.push(this.imgSrc);
+    }
   }
 };
 </script>
 
 <style scoped>
 #Card {
+  margin: 1rem 0;
   color: #2c3e50;
-  height: 270px;
-  width: 200px;
+  height: 17rem;
+  width: 15vw;
   border-radius: 1rem;
-  box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.6);
-  transition: 0.3s ease-in;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left;
+  box-shadow: 0px 0px 14px 1px rgba(222, 222, 222, 0.2);
+  transition: 0.3s ease-out;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -34,14 +41,15 @@ export default {
 }
 
 #Card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
   border: 3px solid white;
 }
 
 img {
-  width: auto;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 h2 {
