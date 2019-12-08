@@ -1,6 +1,6 @@
 <template>
-  <div id="Card">
-    <img :src="require(`../assets/images/${imgSrc}`)" :alt="name" @click="addHistory" />
+  <div id="Card" @click="addHistory">
+    <img :src="require(`../assets/images/${imgSrc}`)" :alt="name" />
     <h2>{{name}}</h2>
   </div>
 </template>
