@@ -1,6 +1,6 @@
 <template>
   <div id="App">
-    <Header :history="history" />
+    <Header />
     <CardContainer :cardData="planets" :history="history" />
     <HistoryBar :history="history" />
     <Footer />
@@ -82,12 +82,13 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   user-select: none;
-  font-family: sans-serif;
 }
 
 body {

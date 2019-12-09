@@ -1,6 +1,7 @@
 <template>
   <div class="Header">
-    <h1>SEE&SAY</h1>
+    <h1>{{"The Solar System"}}</h1>
+    <hr>
   </div>
 </template>
 
@@ -18,13 +19,26 @@ export default {
 .Header {
   padding: 0.2rem 8rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100vw;
   height: 10vh;
-  background-color: rgb(250, 198, 28);
+  background-color: #07252e;
   font-family: "Cinzel", serif;
-  color: #fff;
+  color: #faa533;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+hr {
+  height: 5px;
+  width: 40%;
+  background: #faa533;
+  border: none;
+  border-radius: 2px;
 }
 </style>

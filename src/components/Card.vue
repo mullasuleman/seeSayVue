@@ -1,7 +1,8 @@
 <template>
-  <div id="Card" @click="playAudio(require(`../assets/audios/${audio}`))">
+  <div id="Card" @click="openCard">
     <img :src="require(`../assets/images/${imgSrc}`)" :alt="name" />
     <h2>{{name}}</h2>
+    <!-- <p>This is where the text goes</p> -->
   </div>
 </template>
 
@@ -15,16 +16,20 @@ export default {
     audio: String
   },
   methods: {
+    openCard() {
+      this.addHistory();
+      this.playAudio();
+    },
     addHistory() {
       if (this.history.length >= 10) {
         this.history.shift();
       }
       this.history.push(this.imgSrc);
     },
-    playAudio(file) {
+    playAudio() {
+      let file = require(`../assets/audios/${this.audio}`)
       let audio = new Audio(file);
       audio.play();
-      this.addHistory();
     }
   }
 };
@@ -34,7 +39,7 @@ export default {
 #Card {
   margin: 1rem 0;
   color: #2c3e50;
-  height: 17rem;
+  /* height: 25rem; */
   width: 15vw;
   border-radius: 1rem;
   box-shadow: 0px 0px 14px 1px rgba(222, 222, 222, 0.2);
@@ -44,7 +49,7 @@ export default {
   justify-content: flex-end;
   align-items: flex-start;
   overflow: hidden;
-  font-family: "Rajdhani", sans-serif;
+  background: #ebe2d0;
 }
 
 #Card:hover {
@@ -54,14 +59,23 @@ export default {
 }
 
 img {
-  width: 100%;
-  height: 100%;
+  align-self: center;
+  position: relative;
+  width: 150%;
+  height: 150%;
   object-fit: cover;
 }
 
 h2 {
   position: absolute;
+  color: #ebe2d0;
   padding: 1rem;
-  color: #fff;
+  font-family: "Rajdhani", sans-serif;
+}
+
+p {
+  /* position: absolute; */
+  margin: 0 1rem;
+  background: white;
 }
 </style>
