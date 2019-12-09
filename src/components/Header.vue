@@ -6,13 +6,9 @@
 </template>
 
 <script>
-export default {
-  name: "Header",
-  components: {},
-  props: {
-    history: Array
-  }
-};
+	export default {
+		name: "Header"
+	};
 </script>
 
 <style scoped>
