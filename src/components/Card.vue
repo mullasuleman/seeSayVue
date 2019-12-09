@@ -1,5 +1,5 @@
 <template>
-  <div id="Card" @click="addHistory">
+  <div id="Card" @click="playAudio(require(`../assets/audios/${audio}`))">
     <img :src="require(`../assets/images/${imgSrc}`)" :alt="name" />
     <h2>{{name}}</h2>
   </div>
@@ -11,7 +11,8 @@ export default {
   props: {
     imgSrc: String,
     name: String,
-    history: Array
+    history: Array,
+    audio: String
   },
   methods: {
     addHistory() {
@@ -19,6 +20,11 @@ export default {
         this.history.shift();
       }
       this.history.push(this.imgSrc);
+    },
+    playAudio(file) {
+      let audio = new Audio(file);
+      audio.play();
+      this.addHistory();
     }
   }
 };

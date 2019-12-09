@@ -1,6 +1,13 @@
 <template>
   <div id="CardContainer">
-    <Card v-for="(item, index) in cardData" :key="index" :imgSrc="item.source" :name="item.name" :history="history" />
+    <Card
+      v-for="(item, index) in cardData"
+      :key="index"
+      :imgSrc="item.source"
+      :name="item.name"
+      :history="history"
+      :audio="item.audio"
+    />
   </div>
 </template>
 
