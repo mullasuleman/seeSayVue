@@ -1,18 +1,13 @@
 <template>
   <div class="Header">
     <h1>SEE&SAY</h1>
-    <!-- <HistoryBar :history="history" /> -->
   </div>
 </template>
 
 <script>
-// import HistoryBar from "./HistoryBar";
-
 export default {
   name: "Header",
-  components: {
-    // HistoryBar
-  },
+  components: {},
   props: {
     history: Array
   }
@@ -29,5 +24,7 @@ export default {
   width: 100vw;
   height: 10vh;
   background-color: rgb(250, 198, 28);
+  font-family: "Cinzel", serif;
+  color: #fff;
 }
 </style>

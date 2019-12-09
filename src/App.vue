@@ -102,10 +102,9 @@ body {
   color: #2c3e50;
   min-height: 100vh;
   width: 100vw;
-  background: linear-gradient(
-    180deg,
-    rgba(36, 35, 48, 1) 0%,
-    rgba(87, 66, 94, 1) 100%
-  );
+  background-image: url("../src/assets/images/space_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>

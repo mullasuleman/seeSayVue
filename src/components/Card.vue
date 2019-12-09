@@ -44,6 +44,7 @@ export default {
   justify-content: flex-end;
   align-items: flex-start;
   overflow: hidden;
+  font-family: "Rajdhani", sans-serif;
 }
 
 #Card:hover {
