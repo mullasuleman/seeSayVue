@@ -24,7 +24,8 @@ export default {
   data() {
     return {
       title: "The Solar System",
-      intro: "A See 'N Say experience created for 3-6 years old. \nClick a card to learn about our solar system and planets!",
+      intro:
+        "A See 'N Say experience created for 3-6 years old. \nClick any card to learn about our solar system and planets!",
       planets: [
         {
           name: "The Sun",
@@ -90,24 +91,24 @@ export default {
       history: [],
       credits: [
         {
+          sectionTitle: "Fonts",
+          items: ["Google Fonts fonts.google.com"]
+        },
+        {
+          sectionTitle: "Audio",
+          items: ["Notevibes www.notevibes.com"]
+        },
+        {
           sectionTitle: "Group Members",
-          items: ["Michael Mueller", "Suleman Kasim Mulla", "Usman Butt"]
+          items: ["Michael Mueller", "Suleman Mulla", "Usman Butt"]
         },
         {
-          sectionTitle: "Audio Sources",
-          items: ["https://notevibes.com/"]
+          sectionTitle: "Images",
+          items: ["NASA solarsystem.nasa.gov"]
         },
         {
-          sectionTitle: "Image Sources",
-          items: ["Nasa | https://solarsystem.nasa.gov/planets/overview/"]
-        },
-        {
-          sectionTitle: "Info Sources",
-          items: ["Nasa | https://solarsystem.nasa.gov/planets/overview/"]
-        },
-        {
-          sectionTitle: "Font Sources",
-          items: ["Google Fonts | https://fonts.google.com/"]
+          sectionTitle: "Information",
+          items: ["NASA solarsystem.nasa.gov"]
         }
       ]
     };
@@ -117,7 +118,7 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Cinzel&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:400,600&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:400,600&display=swap");
 
 * {
   padding: 0;
@@ -135,7 +136,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: #2c3e50;
   min-height: 100vh;
   width: 100vw;
   background-image: url("../src/assets/images/space_bg.jpg");
