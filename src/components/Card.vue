@@ -21,10 +21,14 @@ export default {
       this.playAudio();
     },
     addHistory() {
+      let cardObj = { 
+        source: this.imgSrc,
+        audio: this.audio
+      };
       if (this.history.length >= 10) {
         this.history.shift();
       }
-      this.history.push(this.imgSrc);
+      this.history.push(cardObj);
     },
     playAudio() {
       let file = require(`../assets/audios/${this.audio}`)

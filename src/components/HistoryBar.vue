@@ -1,6 +1,6 @@
 <template>
   <div id="HistoryBar">
-    <HistoryItem v-for="(item, index) in history" :key="index" :imgSrc="item" />
+    <HistoryItem v-for="(item, index) in history" :key="index" :imgSrc="item.source" :audioSrc="item.audio" />
   </div>
 </template>
 

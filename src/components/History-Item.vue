@@ -1,5 +1,5 @@
 <template>
-  <div id="HistoryItem">
+  <div id="HistoryItem" @click="playAudio">
     <img :src="require(`../assets/images/${imgSrc}`)" alt="planet" />
   </div>
 </template>
@@ -8,8 +8,17 @@
 export default {
   name: "HistoryItem",
   props: {
-    imgSrc: String
-  }
+    imgSrc: String,
+    audioSrc: String
+  },
+  methods: {
+    playAudio() {
+      window.console.log(this.audioSrc)
+      let file = require(`../assets/audios/${this.audioSrc}`);
+      let audio = new Audio(file);
+      audio.play();
+    }
+  },
 };
 </script>
 
