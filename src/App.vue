@@ -1,6 +1,6 @@
 <template>
   <div id="App">
-    <Header />
+    <Header :title="title" :intro="intro" />
     <CardContainer :cardData="planets" :history="history" />
     <HistoryBar :history="history" />
     <Footer :credits="credits" />
@@ -23,56 +23,68 @@ export default {
   },
   data() {
     return {
+      title: "The Solar System",
+      intro: "A See 'N Say experience created for 3-6 years old to learn about our solar system and its planets!",
       planets: [
         {
           name: "The Sun",
           source: "Sun.jpg",
-          audio: "Sun.mp3"
+          audio: "Sun.mp3",
+          desc: "The Sun is the star at the centre of the Solar System."
         },
         {
           name: "Mercury",
           source: "Mercury.jpg",
-          audio: "Mercury.mp3"
+          audio: "Mercury.mp3",
+          desc: "Mercury is the first planet from the Sun."
         },
         {
           name: "Venus",
           source: "Venus.jpg",
-          audio: "Venus.mp3"
+          audio: "Venus.mp3",
+          desc: "Venus is the second planet from the Sun."
         },
         {
           name: "Earth",
           source: "Earth.png",
-          audio: "Earth.mp3"
+          audio: "Earth.mp3",
+          desc: "Earth is our home. It is the third planet from the Sun."
         },
         {
           name: "Mars",
           source: "Mars.jpg",
-          audio: "Mars.mp3"
+          audio: "Mars.mp3",
+          desc: "Mars is the fourth planet from the Sun."
         },
         {
           name: "Jupiter",
           source: "Jupiter.jpg",
-          audio: "Jupiter.mp3"
+          audio: "Jupiter.mp3",
+          desc: "Jupiter is the largest and fifth planet from the Sun."
         },
         {
           name: "Saturn",
           source: "Saturn.jpg",
-          audio: "Saturn.mp3"
+          audio: "Saturn.mp3",
+          desc: "Saturn is the sixth planet from the Sun."
         },
         {
           name: "Uranus",
           source: "Uranus.jpg",
-          audio: "Uranus.mp3"
+          audio: "Uranus.mp3",
+          desc: "Uranus is the seventh planet from the Sun."
         },
         {
           name: "Neptune",
           source: "Neptune.jpg",
-          audio: "Neptune.mp3"
+          audio: "Neptune.mp3",
+          desc: "Neptune is the eighth planet from the Sun."
         },
         {
           name: "Pluto",
           source: "Pluto.png",
-          audio: "Pluto.mp3"
+          audio: "Pluto.mp3",
+          desc: "Pluto is the largest dwarf planet in the solar system."
         }
       ],
       history: [],
@@ -99,14 +111,13 @@ export default {
         }
       ]
     };
-  },
-  methods: {
   }
 };
 </script>
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Cinzel&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:400,600&display=swap');
 
 * {
   padding: 0;
@@ -129,7 +140,7 @@ body {
   width: 100vw;
   background-image: url("../src/assets/images/space_bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 </style>

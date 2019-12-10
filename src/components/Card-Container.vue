@@ -7,6 +7,7 @@
       :name="item.name"
       :history="history"
       :audio="item.audio"
+      :desc="item.desc"
     />
   </div>
 </template>

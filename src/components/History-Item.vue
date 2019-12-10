@@ -34,8 +34,8 @@ export default {
 }
 
 #HistoryItem:hover {
-  background-color: rgba(212, 212, 212, 0.678);
-  transform: scale(1.1);
+  box-shadow: 0px 0px 14px 1px rgba(222, 222, 222, 0.2);
+  transform: scale(0.95);
   cursor: pointer;
 }
 
