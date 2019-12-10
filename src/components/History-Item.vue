@@ -13,7 +13,6 @@ export default {
   },
   methods: {
     playAudio() {
-      window.console.log(this.audioSrc)
       let file = require(`../assets/audios/${this.audioSrc}`);
       let audio = new Audio(file);
       audio.play();

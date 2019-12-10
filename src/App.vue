@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       title: "The Solar System",
-      intro: "A See 'N Say experience created for 3-6 years old to learn about our solar system and its planets!",
+      intro: "A See 'N Say experience created for 3-6 years old. \nClick a card to learn about our solar system and planets!",
       planets: [
         {
           name: "The Sun",

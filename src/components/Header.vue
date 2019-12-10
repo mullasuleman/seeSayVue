@@ -2,7 +2,7 @@
   <div class="Header">
     <h1>{{title}}</h1>
     <hr>
-    <p>{{intro}}</p>
+    <pre>{{intro}}</pre>
   </div>
 </template>
 
@@ -18,7 +18,7 @@
 
 <style scoped>
 .Header {
-  padding: 0.5rem 0rem;
+  padding: 1rem 0rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -28,23 +28,28 @@
   background-color: #07252e;
   font-family: "Cinzel", serif;
   color: #faa533;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
+  text-transform: uppercase;
   letter-spacing: 1rem;
+  padding: 1rem;
 }
 
 hr {
-  height: 1px;
-  width: 40%;
+  height: 3px;
+  width: 10%;
+  margin-left: -1rem;
   background: #faa533;
-  border: none;
-  border-radius: 2px;
+  border: 0.5px solid #faa533;
+  border-radius: 5px;
 }
 
-p {
-  margin-top: 0.5rem;
-  letter-spacing: 1px;
+pre {
+  margin-top: 1rem;
+  letter-spacing: 1.5px;
+  width: 50%;
+  font-family: "Cinzel", serif;
 }
 </style>
