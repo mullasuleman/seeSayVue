@@ -1,5 +1,5 @@
 <template>
-  <div id="HistoryItem">
+  <div id="HistoryItem" @click="playAudio">
     <img :src="require(`../assets/images/${imgSrc}`)" alt="planet" />
   </div>
 </template>
@@ -8,8 +8,16 @@
 export default {
   name: "HistoryItem",
   props: {
-    imgSrc: String
-  }
+    imgSrc: String,
+    audioSrc: String
+  },
+  methods: {
+    playAudio() {
+      let file = require(`../assets/audios/${this.audioSrc}`);
+      let audio = new Audio(file);
+      audio.play();
+    }
+  },
 };
 </script>
 
@@ -25,8 +33,8 @@ export default {
 }
 
 #HistoryItem:hover {
-  background-color: rgba(212, 212, 212, 0.678);
-  transform: scale(1.1);
+  box-shadow: 0px 0px 14px 1px rgba(222, 222, 222, 0.2);
+  transform: scale(0.95);
   cursor: pointer;
 }
 

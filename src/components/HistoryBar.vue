@@ -1,6 +1,6 @@
 <template>
   <div id="HistoryBar">
-    <HistoryItem v-for="(item, index) in history" :key="index" :imgSrc="item" />
+    <HistoryItem v-for="(item, index) in history" :key="index" :imgSrc="item.source" :audioSrc="item.audio" />
   </div>
 </template>
 
@@ -28,8 +28,8 @@ export default {
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
-  background-color: rgb(36, 39, 43);
+  background-color: #07252e;
   border-radius: 1rem;
-  /* border: 2px solid snow; */
+  box-shadow: 0px 0px 14px 1px rgba(222, 222, 222, 0.2);
 }
 </style>

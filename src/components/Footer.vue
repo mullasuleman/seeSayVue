@@ -24,9 +24,13 @@
 
 <style>
 	#Footer {
-		color: #ffffff;
-		/* height: 8vh; */
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding: 1rem;
+		background: #07252e;
+		color: #ebe2d0;
 		width: 100vw;
-		background-color: #333;
+		box-shadow: 0 -5px 100px rgba(235, 226, 208, 0.1);
 	}
 </style>
